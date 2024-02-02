@@ -1,0 +1,27 @@
+Question 1
+SELECT first_name, last_name, salary/15 FROM employees
+
+Question 2
+SELECT employees.last_name,employees.salary/2,department.department_name,jobs.job_id FROM employees
+JOIN departments ON employees.department_id=departments.department_id
+JOIN jobs ON employees.job_id=jobs.job_id
+
+Question 3
+SELECT first_name, salary FROM employees WHERE salary > 10000 AND first_name NOT IN('NANCY','Diana', 'Alexander')
+
+Question 7
+SELECT * FROM employees WHERE first_name LIKE '____%r'
+
+Question6
+SELECT first_name, hire_date FROM employees WHERE hire_date >'03-AUG-90' 
+
+Question 10
+SELECT last_name FROM employees WHERE last_name LIKE '%___%'
+
+Question 8
+SELECT * FROM employees WHERE ROWNUM <= 10
+
+Question 9 
+SELECT first_name, last_name, salary, ROUND(salary/52) AS weekly_salary FROM employees WHERE ROUND(salary/52)<600
+
+Question 5
